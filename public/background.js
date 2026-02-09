@@ -1,8 +1,14 @@
 (() => {
   const canvas = document.getElementById("bg-canvas");
+  if (!canvas) return;
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+
+  const getTheme = () =>
+    document.documentElement.getAttribute("data-theme") === "light"
+      ? "light"
+      : "dark";
 
   class Symbol {
     constructor(x, y, fontSize, canvasHeight) {
@@ -36,10 +42,13 @@
       this.hue = Math.floor(Math.random() * 360);
       this.charIndex = Math.floor(Math.random() * this.characters.length);
     }
-    draw(context) {
+    draw(context, theme) {
       this.text = this.characters.charAt(this.charIndex);
       this.charIndex = (this.charIndex + 1) % this.characters.length;
-      context.fillStyle = "hsla(" + this.hue + ", 35%, 45%, 0.5)";
+      const lightness = theme === "light" ? 28 : 45;
+      const alpha = theme === "light" ? 0.35 : 0.5;
+      context.fillStyle =
+        "hsla(" + this.hue + ", 35%, " + lightness + "%, " + alpha + ")";
       // context.fillStyle = '#ff0a74';
       context.fillText(
         this.text,
@@ -73,10 +82,14 @@
   const effect = new Effect(canvas.width, canvas.height);
 
   function animate() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+    const theme = getTheme();
+    ctx.fillStyle =
+      theme === "light"
+        ? "rgba(245, 245, 245, 0.2)"
+        : "rgba(0, 0, 0, 0.05)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.font = effect.fontSize + "px monospace";
-    effect.symbols.forEach((symbol) => symbol.draw(ctx));
+    ctx.font = effect.fontSize + 'px "Hack", monospace';
+    effect.symbols.forEach((symbol) => symbol.draw(ctx, theme));
     requestAnimationFrame(animate);
   }
   animate();
