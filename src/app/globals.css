@@ -1,26 +1,238 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Hack:wght@400;700&display=swap");
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-base: "Hack", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  --hue: 160; /* default: green-cyan cyberpunk */
+  --radius: 12px;
+  --gap: 16px;
+
+
+  /* Light */
+  --bg: hsl(0 0% 100%);
+  --text: hsl(224 71% 4%);
+  --muted: hsl(220 14% 96%);
+  --border: hsl(220 13% 90%);
+  --primary: hsl(var(--hue) 90% 40%);
+  --primary-contrast: #fff;
+  --ring: hsl(var(--hue) 90% 40% / 0.35);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+html[data-theme="dark"] {
+  --bg: hsl(224 14% 10%);
+  --text: hsl(213 31% 91%);
+  --muted: hsl(223 14% 16%);
+  --border: hsl(223 13% 22%);
+  --primary: hsl(var(--hue) 100% 60%);
+  --primary-contrast: hsl(224 71% 4%);
+  --ring: hsl(var(--hue) 100% 60% / 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
+* { box-sizing: border-box }
+html, body { height: 100%; }
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: var(--font-base);
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% -10%, hsl(var(--hue) 100% 12% / 0.15), transparent), var(--bg);
+}
+
+
+.container { max-width: 1120px; margin: 0 auto; padding: 12px; }
+.section { padding: 64px 0; }
+.grid { display: grid; gap: var(--gap); }
+
+
+/* Cyberpunk chrome */
+.neon-border { border: 1px solid color-mix(in hsl, var(--primary), var(--bg) 70%); box-shadow: 0 0 0 1px color-mix(in hsl, var(--primary), transparent 70%); border-radius: var(--radius); }
+.neon-glow { box-shadow: 0 0 0 1px var(--ring), 0 0 24px var(--ring) inset; }
+
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+
+
+/* Glitch hover */
+@keyframes flicker { 0%,19%,21%,23%,25%,54%,56%,100% { opacity: 1 } 20%,24%,55% { opacity: .6 } }
+.glitch:hover { animation: flicker 1.2s infinite; }
+
+
+/* Code blocks */
+pre { background: color-mix(in hsl, var(--muted), var(--bg) 20%); padding: 16px; border-radius: 8px; overflow: auto; border: 1px solid var(--border); }
+
+
+/* Utilities */
+.mono { font-family: var(--font-base); }
+.center { display:flex; align-items:center; justify-content:center; }
+
+/* Project cards */
+.project-card-link .neon-border { transition: transform 200ms ease, box-shadow 200ms ease; }
+.project-card-link:hover .neon-border { transform: translateY(-4px); box-shadow: 0 0 0 1px var(--ring), 0 12px 28px hsl(var(--hue) 60% 30% / 0.18); }
+.project-card-link .neon-border { position: relative; }
+.project-card-link .neon-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, var(--primary), transparent);
+  opacity: 0.8;
+}
+.project-card-flip { perspective: 900px; min-height: 200px; position: relative; }
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 420ms ease;
+}
+.project-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 18px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(140deg, color-mix(in hsl, var(--muted), var(--bg) 25%), color-mix(in hsl, var(--bg), transparent 20%));
+  border: 1px solid color-mix(in hsl, var(--border), transparent 20%);
+}
+.project-card-front { display: grid; align-items: center; text-align: center; }
+.project-card-back {
+  transform: rotateY(180deg);
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  background: linear-gradient(140deg, color-mix(in hsl, var(--primary), var(--bg) 88%), color-mix(in hsl, var(--bg), transparent 20%));
+}
+.project-card-back > * { position: relative; z-index: 1; }
+.project-card-back-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.88;
+  filter: brightness(1.2) saturate(1.3) contrast(1.05);
+}
+.project-card-title { margin: 0; font-size: 1.2rem; line-height: 1.2; }
+.project-card-statement { margin: 0; font-size: 0.95rem; line-height: 1.35; opacity: 0.9; }
+.project-card-back-label { opacity: 0.8; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; text-shadow: 0 2px 10px hsl(0 0% 0% / 0.6); }
+.project-card-back-meta { display: grid; gap: 6px; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 2px 10px hsl(0 0% 0% / 0.6); }
+.project-card-link:hover .project-card-inner { transform: rotateY(180deg); }
+.project-filters { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 20px; }
+.project-filters-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.project-filters-label { opacity: 0.7; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; }
+.project-filters-buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+.project-filter-button,
+.project-filter-button {
+  border: 1px solid color-mix(in hsl, var(--border), var(--primary) 20%);
+  background: color-mix(in hsl, var(--muted), var(--bg) 45%);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+.project-filter-button:hover { transform: translateY(-1px); }
+.project-filter-button.is-active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 1px var(--ring);
+  background: color-mix(in hsl, var(--primary), var(--bg) 82%);
+}
+.project-filter-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+/* Law detail */
+.law-hero-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); align-items: stretch; }
+.law-panel {
+  background: color-mix(in hsl, var(--bg), transparent 30%);
+  border: 1px solid color-mix(in hsl, var(--border), transparent 35%);
+  border-radius: 16px;
+  padding: 22px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 18px 40px hsl(0 0% 0% / 0.12);
+}
+.law-hero-content { display: grid; gap: 12px; }
+.law-hero-kicker { margin: 0; opacity: 0.7; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.law-hero-title { margin: 0; font-size: clamp(28px, 4.4vw, 42px); line-height: 1.1; }
+.law-hero-summary { margin: 0; opacity: 0.9; max-width: 44ch; }
+.law-origin { margin: 0; opacity: 0.75; font-size: 0.95rem; max-width: 52ch; }
+.law-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.law-meta-secondary { opacity: 0.9; }
+.law-cover {
+  position: relative;
+  border-radius: 18px;
+  border: 1px solid color-mix(in hsl, var(--border), transparent 35%);
+  overflow: hidden;
+  background: color-mix(in hsl, var(--bg), transparent 25%);
+  box-shadow: 0 18px 40px hsl(0 0% 0% / 0.12);
+}
+.law-cover img { width: 100%; height: 100%; display: block; object-fit: cover; aspect-ratio: 4 / 3; }
+.law-cover-placeholder { display: grid; place-items: center; min-height: 240px; opacity: 0.7; }
+.law-cover-content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: end;
+  gap: 10px;
+  padding: 22px;
+  z-index: 1;
+}
+.law-cover-label { margin: 0; opacity: 0.75; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.law-cover-text { margin: 0; font-size: clamp(20px, 3.4vw, 30px); line-height: 1.25; }
+.law-cover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, hsl(var(--hue) 60% 60% / 0.08), transparent 45%, hsl(var(--hue) 80% 20% / 0.18));
+  pointer-events: none;
+}
+.law-case-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.law-card {
+  background: color-mix(in hsl, var(--bg), transparent 35%);
+  border: 1px solid color-mix(in hsl, var(--border), transparent 35%);
+  border-radius: 14px;
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+}
+.law-card-title { margin: 0; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7; }
+.law-card-body { margin: 0; opacity: 0.9; line-height: 1.5; }
+.law-card-stack { display: grid; gap: 10px; }
+.law-card-section { display: grid; gap: 8px; }
+.law-card-label { margin: 0; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.6; }
+.law-card-list { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.law-related-link { color: inherit; text-decoration: none; }
+.law-related-link:hover { text-decoration: underline; }
+.law-related-missing { opacity: 0.7; }
+.law-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.law-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in hsl, var(--border), var(--primary) 25%);
+  background: color-mix(in hsl, var(--muted), var(--bg) 45%);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+.law-link:hover { transform: translateY(-1px); border-color: var(--primary); box-shadow: 0 0 0 1px var(--ring); }
+.law-link:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--ring); }
+
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
 }

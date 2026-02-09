@@ -1,0 +1,427 @@
+[
+  {
+    "id": "entropy",
+    "title": "Law of Entropy",
+    "tier": "primary",
+    "cover": "/covers/law-entropy.png",
+    "origin": {
+      "period": "1850–1865",
+      "context": "Thermodynamics",
+      "attribution": "Rudolf Clausius, Lord Kelvin",
+      "notes": "Later generalized beyond physics into systems, life, and organizations"
+    },
+    "canonical": {
+      "statement": "Systems tend toward disorder unless energy is applied."
+    },
+    "domains": ["Physics", "Life", "Organizations"],
+    "coreInsight": "Order is temporary and costly.",
+    "examples": {
+      "daily": [
+        "Homes become messy without cleaning",
+        "Skills decline without practice",
+        "Relationships drift without care"
+      ]
+    },
+    "relationships": {
+      "reinforces": ["murphys-law", "heraclitus"],
+      "contrasts": ["law-of-one"],
+      "related": ["antifragility", "lindy-effect", "pareto-principle"]
+    },
+    "visualMetaphor": "A sandcastle slowly collapsing without repair",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "heraclitus",
+    "title": "Heraclitus’ Law",
+    "tier": "primary",
+    "cover": "/covers/law-change.png",
+    "origin": {
+      "period": "c. 500 BC",
+      "context": "Pre-Socratic philosophy",
+      "attribution": "Heraclitus of Ephesus",
+      "notes": "Early articulation of impermanence"
+    },
+    "canonical": {
+      "statement": "Change is the only constant."
+    },
+    "domains": ["Philosophy", "Time"],
+    "coreInsight": "Stability is an illusion maintained by effort.",
+    "examples": {
+      "daily": ["Careers evolve", "Friendships change", "Tools become obsolete"]
+    },
+    "relationships": {
+      "reinforces": ["entropy"],
+      "contrasts": [],
+      "related": ["lindy-effect", "law-of-one"]
+    },
+    "visualMetaphor": "A river flowing around fixed stones",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "law-of-one",
+    "title": "Law of One",
+    "tier": "primary",
+    "cover": "/covers/law-one.png",
+    "origin": {
+      "period": "Ancient (pre-500 BC)",
+      "context": "Mystical and philosophical traditions",
+      "attribution": "Vedantic, Hermetic, Neoplatonic traditions",
+      "notes": "Appears independently across civilizations"
+    },
+    "canonical": {
+      "statement": "All is One; separation is illusion."
+    },
+    "domains": ["Systems", "Spirituality"],
+    "coreInsight": "No action exists in isolation.",
+    "examples": {
+      "daily": [
+        "Burnout affects family life",
+        "Individual actions impact the environment",
+        "Team morale affects output"
+      ]
+    },
+    "relationships": {
+      "reinforces": ["hermetic-principle", "conways-law"],
+      "contrasts": ["entropy"],
+      "related": ["tragedy-of-the-commons", "newtons-third-law"]
+    },
+    "visualMetaphor": "Interconnected threads forming a single fabric",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "godel-incompleteness",
+    "title": "Gödel’s Incompleteness",
+    "tier": "primary",
+    "cover": "/covers/law-godel.png",
+    "origin": {
+      "period": "1931",
+      "context": "Mathematical logic",
+      "attribution": "Kurt Gödel",
+      "notes": "Formally proved limits of axiomatic systems"
+    },
+    "canonical": {
+      "statement": "Any sufficiently complex system contains truths it cannot prove."
+    },
+    "domains": ["Logic", "Knowledge"],
+    "coreInsight": "No system can fully explain itself.",
+    "examples": {
+      "daily": [
+        "Rules fail at edge cases",
+        "Metrics miss meaning",
+        "Policies need exceptions"
+      ]
+    },
+    "relationships": {
+      "reinforces": ["map-territory"],
+      "contrasts": ["occams-razor"],
+      "related": ["observer-effect", "goodharts-law"]
+    },
+    "visualMetaphor": "A circle with an unreachable center",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "occams-razor",
+    "title": "Occam’s Razor",
+    "tier": "primary",
+    "cover": "/covers/law-occam.png",
+    "origin": {
+      "period": "14th century (c. 1320)",
+      "context": "Scholastic philosophy",
+      "attribution": "William of Ockham",
+      "notes": "Foundation of scientific reasoning"
+    },
+    "canonical": {
+      "statement": "Entities should not be multiplied beyond necessity."
+    },
+    "domains": ["Reasoning", "Science"],
+    "coreInsight": "Unnecessary assumptions obscure truth.",
+    "examples": {
+      "daily": [
+        "A mistake is usually misunderstanding",
+        "A bug is simple before complex"
+      ]
+    },
+    "relationships": {
+      "reinforces": ["hanlons-razor", "pareto-principle"],
+      "contrasts": ["godel-incompleteness"],
+      "related": ["map-territory"]
+    },
+    "visualMetaphor": "A blade removing excess branches",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "murphys-law",
+    "title": "Murphy’s Law",
+    "tier": "primary",
+    "cover": "/covers/law-murphy.png",
+    "origin": {
+      "period": "1949",
+      "context": "Aerospace engineering",
+      "attribution": "Edward A. Murphy Jr.",
+      "notes": "Observed during high-risk system testing"
+    },
+    "canonical": {
+      "statement": "Anything that can go wrong, will go wrong."
+    },
+    "domains": ["Systems", "Engineering"],
+    "coreInsight": "Unaddressed failure becomes inevitable.",
+    "examples": {
+      "daily": [
+        "A phone dies when uncharged",
+        "Deadlines slip without buffers",
+        "Data is lost without backups"
+      ]
+    },
+    "relationships": {
+      "reinforces": ["entropy"],
+      "contrasts": ["lindy-effect"],
+      "related": ["pareto-principle", "antifragility"]
+    },
+    "visualMetaphor": "A cracked dam leaking at weak points",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "pareto-principle",
+    "title": "Pareto Principle",
+    "tier": "primary",
+    "cover": "/covers/law-pareto.png",
+    "origin": {
+      "period": "1896",
+      "context": "Economics",
+      "attribution": "Vilfredo Pareto",
+      "notes": "Later generalized across domains"
+    },
+    "canonical": {
+      "statement": "A small number of causes produce a large portion of effects."
+    },
+    "domains": ["Systems", "Economics"],
+    "coreInsight": "Impact is unevenly distributed.",
+    "examples": {
+      "daily": ["Few habits shape most outcomes", "Few tasks create most value"]
+    },
+    "relationships": {
+      "reinforces": ["leverage"],
+      "contrasts": [],
+      "related": ["entropy", "murphys-law"]
+    },
+    "visualMetaphor": "A tall bar among many small ones",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "observer-effect",
+    "title": "Observer Effect",
+    "tier": "primary",
+    "cover": "/covers/law-observer.png",
+    "origin": {
+      "period": "1920s–1930s",
+      "context": "Quantum mechanics",
+      "attribution": "Heisenberg and contemporaries",
+      "notes": "Extended to social systems"
+    },
+    "canonical": {
+      "statement": "The act of observation changes the outcome."
+    },
+    "domains": ["Physics", "Behavior"],
+    "coreInsight": "Measurement alters behavior.",
+    "examples": {
+      "daily": [
+        "People behave differently when watched",
+        "Metrics change how work is done"
+      ]
+    },
+    "relationships": {
+      "reinforces": ["goodharts-law"],
+      "contrasts": [],
+      "related": ["map-territory"]
+    },
+    "visualMetaphor": "An eye bending light",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "lindy-effect",
+    "title": "Lindy Effect",
+    "tier": "primary",
+    "cover": "/covers/law-lindy.png",
+    "origin": {
+      "period": "1960s",
+      "context": "Statistics and risk",
+      "attribution": "Benoit Mandelbrot (popularized)",
+      "notes": "Observed in culture, ideas, and technology"
+    },
+    "canonical": {
+      "statement": "The longer something has survived, the longer it is likely to survive."
+    },
+    "domains": ["Time", "Risk"],
+    "coreInsight": "Time filters fragility.",
+    "examples": {
+      "daily": ["Old books stay relevant", "Simple tools outlast complex ones"]
+    },
+    "relationships": {
+      "reinforces": ["antifragility"],
+      "contrasts": ["murphys-law"],
+      "related": ["entropy"]
+    },
+    "visualMetaphor": "A weathered stone still standing",
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "hanlons-razor",
+    "title": "Hanlon’s Razor",
+    "tier": "secondary",
+    "cover": "/covers/law-hanlon.png",
+    "origin": {
+      "period": "1980s",
+      "context": "Informal philosophical heuristic",
+      "attribution": "Robert J. Hanlon",
+      "notes": "Closely aligned with Occam’s Razor"
+    },
+    "canonical": {
+      "statement": "Never attribute to malice that which is adequately explained by ignorance."
+    },
+    "domains": ["Psychology"],
+    "coreInsight": "Confusion is more common than cruelty.",
+    "relationships": {
+      "reinforces": ["occams-razor"],
+      "contrasts": [],
+      "related": ["observer-effect"]
+    },
+    "visualMetaphor": null,
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "goodharts-law",
+    "title": "Goodhart’s Law",
+    "tier": "secondary",
+    "cover": "/covers/law-goodhart.png",
+    "origin": {
+      "period": "1975",
+      "context": "Economics and policy",
+      "attribution": "Charles Goodhart",
+      "notes": "Widely applied in metrics-driven systems"
+    },
+    "canonical": {
+      "statement": "When a measure becomes a target, it ceases to be a good measure."
+    },
+    "domains": ["Metrics", "Organizations"],
+    "coreInsight": "Measurement distorts incentives.",
+    "relationships": {
+      "reinforces": ["observer-effect"],
+      "contrasts": [],
+      "related": ["map-territory"]
+    },
+    "visualMetaphor": null,
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "conways-law",
+    "title": "Conway’s Law",
+    "tier": "secondary",
+    "cover": "/covers/law-conway.png",
+    "origin": {
+      "period": "1968",
+      "context": "Software and organizational theory",
+      "attribution": "Melvin Conway",
+      "notes": "Observed in system design"
+    },
+    "canonical": {
+      "statement": "Systems mirror the communication structure of the organizations that build them."
+    },
+    "domains": ["Organizations", "Systems"],
+    "coreInsight": "Structure shapes outcomes.",
+    "relationships": {
+      "reinforces": ["law-of-one"],
+      "contrasts": [],
+      "related": ["peter-principle"]
+    },
+    "visualMetaphor": null,
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  },
+
+  {
+    "id": "antifragility",
+    "title": "Antifragility",
+    "tier": "secondary",
+    "cover": "/covers/law-antifragile.png",
+    "origin": {
+      "period": "2012",
+      "context": "Risk and complex systems",
+      "attribution": "Nassim Nicholas Taleb",
+      "notes": "Extension of fragility theory"
+    },
+    "canonical": {
+      "statement": "Some systems benefit from stress and disorder."
+    },
+    "domains": ["Risk", "Biology"],
+    "coreInsight": "Stress can strengthen rather than weaken.",
+    "relationships": {
+      "reinforces": ["entropy", "lindy-effect"],
+      "contrasts": [],
+      "related": ["murphys-law"]
+    },
+    "visualMetaphor": null,
+    "historicalNotes": [],
+    "communityReflections": [],
+    "counterExamples": [],
+    "citations": [],
+    "lastReviewed": "2026-02-10"
+  }
+]
