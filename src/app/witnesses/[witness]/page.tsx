@@ -4,13 +4,14 @@ import data from "@/content/witness.json";
 import type { WitnessData } from "@/lib/types";
 import Badge from "@/components/Badge";
 
-export default function WitnessDetail({
+export default async function WitnessDetail({
   params,
 }: {
-  params: { witness: string };
+  params: Promise<{ witness: string }>;
 }) {
+  const { witness } = await params;
   const entry = (data as WitnessData).entries.find(
-    (item) => item.id === params.witness,
+    (item) => item.id === witness,
   );
 
   if (!entry) return <div className="container">Not found</div>;

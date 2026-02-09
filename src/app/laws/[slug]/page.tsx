@@ -6,8 +6,13 @@ import laws from "@/content/laws.json";
 import type { Law } from "@/lib/types";
 import Badge from "@/components/Badge";
 
-export default function LawDetail({ params }: { params: { slug: string } }) {
-  const p = (laws as Law[]).find((x) => x.id === params.slug);
+export default async function LawDetail({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const p = (laws as Law[]).find((x) => x.id === slug);
   if (!p) return <div className="container">Not found</div>;
 
   const lawTitleById = new Map(
