@@ -56,3 +56,30 @@ export type ExperienceItem = {
     org: string;
     bullets: string[];
 };
+
+export type WitnessEntry = {
+    id: string;
+    author: string;
+    quote: string;
+    year: number;
+    source: string;
+    related: string[];
+    tone: string;
+    hidden: boolean;
+};
+
+export type WitnessData = {
+    meta: {
+        category: string;
+        description: string;
+        intent: string;
+        rules: string[];
+        version: string;
+    };
+    entries: WitnessEntry[];
+    extensions: {
+        annotations: Record<string, string>;
+        counterQuotes: string[];
+        translations: Record<string, string>;
+    };
+};

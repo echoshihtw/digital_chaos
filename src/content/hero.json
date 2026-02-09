@@ -1,0 +1,25 @@
+{
+  "headline": "> Truth must be decentralized to survive.",
+  "subline": "Occam · Murphy · Gödel · Entropy · Lindy · Systems · Invariants",
+  "ctaPrimary": { "label": "Enter the Laws", "href": "/laws" },
+  "ctaSecondary": { "label": "On Method", "href": "/ethos" },
+  "highlight": "This is a public record of patterns that persist when power shifts, systems fail, and narratives are rewritten.",
+  "movement": {
+    "stance": [
+      "No central authority",
+      "No appeal to belief",
+      "No dependency on identity"
+    ],
+    "principles": [
+      "Truth as structure",
+      "Observation over narrative",
+      "Verification over trust"
+    ]
+  },
+  "future": {
+    "witnesses": {
+      "description": "Fragments from those who named the patterns before distortion, capture, or collapse.",
+      "status": "planned"
+    }
+  }
+}

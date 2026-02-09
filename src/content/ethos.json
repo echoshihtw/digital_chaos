@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "id": "ethos",
+    "title": "On Method",
+    "version": "1.0.0",
+    "status": "canonical",
+    "description": "Defines how truth is observed, evaluated, and preserved within this wiki.",
+    "lastUpdated": "2026-02-10"
+  },
+
+  "opening": {
+    "lines": [
+      "Truth is not declared here.",
+      "It is observed, tested, and recorded.",
+      "This wiki exists to document patterns that survive contact with reality — across time, systems, and belief structures."
+    ]
+  },
+
+  "sections": [
+    {
+      "id": "what_this_is",
+      "title": "What This Is",
+      "content": [
+        "This is a wiki of laws, not doctrines.",
+        "A law is admitted only when it reappears across domains, remains observable without belief, holds under pressure, scale, and failure, and explains more than it predicts.",
+        "Nothing here asks for faith.",
+        "Everything here tolerates scrutiny."
+      ]
+    },
+
+    {
+      "id": "what_this_is_not",
+      "title": "What This Is Not",
+      "content": [
+        "This is not a religion.",
+        "This is not a manifesto.",
+        "This is not a personality.",
+        "This is not a moral authority.",
+        "This is not a promise of certainty.",
+        "Certainty is treated as a signal for re-examination."
+      ]
+    },
+
+    {
+      "id": "on_authority",
+      "title": "On Authority",
+      "content": [
+        "No voice is authoritative by default.",
+        "Names may appear.",
+        "Quotes may be preserved.",
+        "No individual is elevated above the patterns they observed.",
+        "This wiki values what was seen, what was tested, and what endured — not who said it."
+      ]
+    },
+
+    {
+      "id": "on_contradiction",
+      "title": "On Contradiction",
+      "content": [
+        "Contradictions are not removed.",
+        "They are documented.",
+        "When principles conflict, both are kept, context is expanded, and limits are exposed.",
+        "Reality is not required to be internally consistent.",
+        "Only honestly represented."
+      ]
+    },
+
+    {
+      "id": "on_simplicity",
+      "title": "On Simplicity",
+      "content": [
+        "When two explanations exist, the simpler is preferred — until it fails.",
+        "Complexity is not depth.",
+        "Obscurity is not wisdom."
+      ]
+    },
+
+    {
+      "id": "on_time",
+      "title": "On Time",
+      "content": [
+        "Time is treated as a filter.",
+        "Ideas that survive repetition, misuse, and reinterpretation gain weight.",
+        "Ideas that require constant defense lose it.",
+        "Old laws are revisited.",
+        "New laws are introduced cautiously."
+      ]
+    },
+
+    {
+      "id": "on_contribution",
+      "title": "On Contribution",
+      "content": [
+        "Anyone may contribute.",
+        "Contributions must clarify, not decorate.",
+        "Claims must be grounded in observation.",
+        "Disagreement must be preserved when it exists.",
+        "The structure of the system must be respected.",
+        "This is a public record, not a personal canvas."
+      ]
+    }
+  ],
+
+  "closing": {
+    "lines": [
+      "This wiki does not seek to convince.",
+      "It exists so that when systems fail, beliefs collapse, or noise overwhelms signal, something stable remains to be consulted.",
+      "Enter without certainty.",
+      "Leave with better questions."
+    ]
+  },
+
+  "extensions": {
+    "translations": {},
+    "annotations": {},
+    "disputes": [],
+    "historicalVersions": []
+  }
+}

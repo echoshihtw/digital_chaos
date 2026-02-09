@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import BackgroundDimmer from "./BackgroundDimmer";
 
 export default function Header() {
   return (
@@ -18,11 +19,12 @@ export default function Header() {
       </Link>
       <nav style={{ display: "flex", gap: 16, alignItems: "center" }}>
         <Link href="/laws" className="glitch">
-          Laws
+          // laws
         </Link>
-        <Link href="/quotes" className="glitch">
-          Quotes
+        <Link href="/witnesses" className="glitch">
+          // witnesses
         </Link>
+        <BackgroundDimmer />
         <ThemeToggle />
       </nav>
     </header>

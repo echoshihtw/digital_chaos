@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "category": "witnesses",
+    "description": "Recorded statements that expose persistent human behavior, contradiction, and limitation, often without intent to do so.",
+    "intent": "To preserve concise observations of human and systemic behavior without interpretation or moral framing.",
+    "rules": [
+      "Quotes are preserved verbatim",
+      "Authors are recorded, not elevated",
+      "Contradictions are allowed",
+      "Tone is descriptive, not expressive",
+      "Context is optional, interpretation is not enforced"
+    ],
+    "version": "1.2.0"
+  },
+
+  "entries": [
+    {
+      "id": "beckett_fail_better",
+      "author": "Samuel Beckett",
+      "quote": "Ever tried. Ever failed. No matter. Try again. Fail again. Fail better.",
+      "year": 1983,
+      "source": "Worstward Ho",
+      "related": ["law_of_failure", "law_of_iteration"],
+      "tone": "observational",
+      "hidden": false
+    },
+    {
+      "id": "coelho_listen_heart",
+      "author": "Paulo Coelho",
+      "quote": "You will never be able to escape from your heart. So it is better to listen to what it has to say.",
+      "year": 1988,
+      "source": "The Alchemist",
+      "related": [
+        "law_of_attention",
+        "law_of_alignment",
+        "law_of_self_consistency"
+      ],
+      "tone": "reflective",
+      "hidden": false
+    },
+    {
+      "id": "orwell_truth",
+      "author": "George Orwell",
+      "quote": "In a time of deceit, telling the truth is a revolutionary act.",
+      "year": 1944,
+      "source": "Essays",
+      "related": ["law_of_power", "law_of_truth"],
+      "tone": "critical",
+      "hidden": true
+    },
+    {
+      "id": "boethius_fortune",
+      "author": "Boethius",
+      "quote": "In every adversity of fortune, the most unhappy kind of misfortune is to have been happy.",
+      "year": 524,
+      "source": "The Consolation of Philosophy",
+      "related": ["law_of_comparison", "law_of_memory"],
+      "tone": "ironic",
+      "hidden": false
+    },
+    {
+      "id": "godel_incompleteness",
+      "author": "Kurt Gödel",
+      "quote": "Either mathematics is too big for the human mind or the human mind is more than a machine.",
+      "year": 1951,
+      "source": "Gibbs Lecture",
+      "related": ["law_of_incompleteness", "law_of_limits"],
+      "tone": "paradoxical",
+      "hidden": true
+    },
+    {
+      "id": "occam_entities",
+      "author": "William of Ockham",
+      "quote": "Entities should not be multiplied without necessity.",
+      "year": 1320,
+      "source": "Philosophical principle",
+      "related": ["law_of_simplicity"],
+      "tone": "descriptive",
+      "hidden": false
+    },
+    {
+      "id": "taleb_fragile",
+      "author": "Nassim Nicholas Taleb",
+      "quote": "Systems that rely on prediction eventually fail; systems that benefit from disorder survive.",
+      "year": 2012,
+      "source": "Antifragile",
+      "related": ["law_of_entropy", "law_of_lindy"],
+      "tone": "critical",
+      "hidden": true
+    },
+    {
+      "id": "feynman_reality",
+      "author": "Richard Feynman",
+      "quote": "For a successful technology, reality must take precedence over public relations, for nature cannot be fooled.",
+      "year": 1986,
+      "source": "Challenger investigation",
+      "related": ["law_of_reality"],
+      "tone": "observational",
+      "hidden": true
+    },
+    {
+      "id": "nietzsche_abyss",
+      "author": "Friedrich Nietzsche",
+      "quote": "He who fights with monsters should look to it that he himself does not become a monster.",
+      "year": 1886,
+      "source": "Beyond Good and Evil",
+      "related": ["law_of_reflection"],
+      "tone": "reflective",
+      "hidden": true
+    },
+    {
+      "id": "arendt_evil",
+      "author": "Hannah Arendt",
+      "quote": "The sad truth is that most evil is done by people who never make up their minds to be good or evil.",
+      "year": 1963,
+      "source": "Eichmann in Jerusalem",
+      "related": ["law_of_compliance", "law_of_bureaucracy"],
+      "tone": "descriptive",
+      "hidden": true
+    },
+    {
+      "id": "turing_machine",
+      "author": "Alan Turing",
+      "quote": "We can only see a short distance ahead, but we can see plenty there that needs to be done.",
+      "year": 1950,
+      "source": "Computing Machinery and Intelligence",
+      "related": ["law_of_limits", "law_of_progress"],
+      "tone": "neutral",
+      "hidden": true
+    },
+    {
+      "id": "camus_absurd",
+      "author": "Albert Camus",
+      "quote": "The struggle itself is enough to fill a man's heart.",
+      "year": 1955,
+      "source": "The Myth of Sisyphus",
+      "related": ["law_of_absurdity"],
+      "tone": "ironic",
+      "hidden": true
+    }
+  ],
+
+  "extensions": {
+    "annotations": {},
+    "counterQuotes": [],
+    "translations": {}
+  }
+}

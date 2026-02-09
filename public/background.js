@@ -5,6 +5,14 @@
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
+  const clamp = (value) => Math.min(1, Math.max(0, value));
+  const readDimmer = () => {
+    const stored = Number(localStorage.getItem("bg-dimmer"));
+    return Number.isFinite(stored) ? clamp(stored) : 0.88;
+  };
+  let dimmer = readDimmer();
+  let rafId = null;
+
   const getTheme = () =>
     document.documentElement.getAttribute("data-theme") === "light"
       ? "light"
@@ -42,11 +50,11 @@
       this.hue = Math.floor(Math.random() * 360);
       this.charIndex = Math.floor(Math.random() * this.characters.length);
     }
-    draw(context, theme) {
+    draw(context, theme, brightness) {
       this.text = this.characters.charAt(this.charIndex);
       this.charIndex = (this.charIndex + 1) % this.characters.length;
       const lightness = theme === "light" ? 28 : 45;
-      const alpha = theme === "light" ? 0.35 : 0.5;
+      const alpha = (theme === "light" ? 0.35 : 0.5) * brightness;
       context.fillStyle =
         "hsla(" + this.hue + ", 35%, " + lightness + "%, " + alpha + ")";
       // context.fillStyle = '#ff0a74';
@@ -81,16 +89,58 @@
 
   const effect = new Effect(canvas.width, canvas.height);
 
+  const clearToBackground = () => {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.fillStyle = getTheme() === "light" ? "rgb(245, 245, 245)" : "rgb(0, 0, 0)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  };
+
+  const stopAnimation = () => {
+    if (rafId !== null) {
+      cancelAnimationFrame(rafId);
+      rafId = null;
+    }
+    clearToBackground();
+  };
+
+  const startAnimation = () => {
+    if (rafId !== null) return;
+    rafId = requestAnimationFrame(animate);
+  };
+
   function animate() {
+    if (dimmer <= 0) {
+      stopAnimation();
+      return;
+    }
     const theme = getTheme();
+    const trailAlpha = (theme === "light" ? 0.2 : 0.05) * dimmer;
     ctx.fillStyle =
       theme === "light"
-        ? "rgba(245, 245, 245, 0.2)"
-        : "rgba(0, 0, 0, 0.05)";
+        ? "rgba(245, 245, 245, " + trailAlpha + ")"
+        : "rgba(0, 0, 0, " + trailAlpha + ")";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.font = effect.fontSize + 'px "Hack", monospace';
-    effect.symbols.forEach((symbol) => symbol.draw(ctx, theme));
-    requestAnimationFrame(animate);
+    effect.symbols.forEach((symbol) => symbol.draw(ctx, theme, dimmer));
+    rafId = requestAnimationFrame(animate);
   }
-  animate();
+  const updateDimmer = (next) => {
+    dimmer = clamp(next);
+    if (dimmer <= 0) {
+      stopAnimation();
+    } else {
+      startAnimation();
+    }
+  };
+  window.addEventListener("bg-dimmer-change", (event) => {
+    updateDimmer(Number(event.detail));
+  });
+  window.addEventListener("storage", (event) => {
+    if (event.key !== "bg-dimmer") return;
+    updateDimmer(readDimmer());
+  });
+  window.addEventListener("resize", clearToBackground);
+  clearToBackground();
+  if (dimmer > 0) startAnimation();
 })();

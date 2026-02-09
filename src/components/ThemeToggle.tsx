@@ -45,11 +45,16 @@ export default function ThemeToggle() {
       onClick={toggle}
       aria-label="Toggle theme"
       aria-pressed={theme === "dark"}
-      className="neon-border"
-      style={{ padding: "6px 10px", borderRadius: 8 }}
+      className="theme-toggle"
+      data-theme={theme}
       title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {theme === "dark" ? "🌙" : "☀️"}
+      <span className="theme-toggle-pill">
+        <span className="theme-toggle-dot" aria-hidden="true" />
+      </span>
+      <span className="theme-toggle-label mono">
+        {theme === "dark" ? "Dark" : "Light"}
+      </span>
     </button>
   );
 }
