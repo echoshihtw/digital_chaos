@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Link from "next/link";
+import Image from "next/image";
 import Section from "@/components/Section";
 import laws from "@/content/laws.json";
 import type { Law } from "@/lib/types";
@@ -55,7 +56,13 @@ export default function LawDetail({ params }: { params: { slug: string } }) {
             )}
           </div>
           <div className="law-cover">
-            <img src={p.cover} alt={`Cover for ${p.title}`} />
+            <Image
+              src={p.cover}
+              alt={`Cover for ${p.title}`}
+              fill
+              sizes="(max-width: 900px) 100vw, 50vw"
+              className="law-cover-image"
+            />
             <div className="law-cover-content">
               <p className="law-cover-label mono">Canonical Statement</p>
               <p className="law-cover-text">{p.canonical.statement}</p>

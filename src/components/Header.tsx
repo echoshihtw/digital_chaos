@@ -19,10 +19,10 @@ export default function Header() {
       </Link>
       <nav style={{ display: "flex", gap: 16, alignItems: "center" }}>
         <Link href="/laws" className="glitch">
-          // laws
+          {"// laws"}
         </Link>
         <Link href="/witnesses" className="glitch">
-          // witnesses
+          {"// witnesses"}
         </Link>
         <BackgroundDimmer />
         <ThemeToggle />

@@ -70,7 +70,9 @@ export default function HomePage() {
               .slice(0, 5)
               .map((entry) => (
                 <div key={entry.id} className="witness-home-item">
-                  <p className="witness-home-quote">"{entry.quote}"</p>
+                  <p className="witness-home-quote">
+                    &ldquo;{entry.quote}&rdquo;
+                  </p>
                   <div className="witness-home-meta mono">
                     <span>{entry.author}</span>
                     <span>{entry.year}</span>

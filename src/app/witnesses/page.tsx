@@ -32,7 +32,7 @@ export default function WitnessesPage() {
               href={`/witnesses/${entry.id}`}
               className="witness-item"
             >
-              <p className="witness-quote">"{entry.quote}"</p>
+              <p className="witness-quote">&ldquo;{entry.quote}&rdquo;</p>
               <div className="witness-item-meta mono">
                 <span>{entry.author}</span>
                 <span>{entry.year}</span>

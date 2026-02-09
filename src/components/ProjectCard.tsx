@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Card from "./Card";
 import { Law } from "@/lib/types";
+import Image from "next/image";
 
 export default function ProjectCard({ p }: { p: Law }) {
   const periodLabel = p.origin.period;
@@ -20,12 +21,12 @@ export default function ProjectCard({ p }: { p: Law }) {
             <div className="project-card-face project-card-front">
               <h3 className="mono project-card-title">{p.title}</h3>
               <p className="project-card-statement">
-                "{p.canonical.statement}"
+                &ldquo;{p.canonical.statement}&rdquo;
               </p>
             </div>
             <div className="project-card-face project-card-back">
               {p.cover && (
-                <img
+                <Image
                   src={p.cover}
                   alt=""
                   className="project-card-back-image"

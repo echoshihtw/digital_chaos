@@ -308,8 +308,9 @@ html[data-theme="light"] .project-card-back-meta {
   overflow: hidden;
   background: color-mix(in hsl, var(--bg), transparent 25%);
   box-shadow: 0 18px 40px hsl(0 0% 0% / 0.12);
+  aspect-ratio: 4 / 3;
 }
-.law-cover img { width: 100%; height: 100%; display: block; object-fit: cover; aspect-ratio: 4 / 3; }
+.law-cover-image { object-fit: cover; }
 .law-cover-placeholder { display: grid; place-items: center; min-height: 240px; opacity: 0.7; }
 .law-cover-content {
   position: absolute;

@@ -19,10 +19,12 @@ export default function WitnessDetail({
     <>
       <Header />
       <Section>
-        <div className="witness-detail">
-          <p className="witness-detail-kicker mono">Witness</p>
-          <h1 className="witness-detail-quote">"{entry.quote}"</h1>
-          <div className="witness-detail-meta">
+          <div className="witness-detail">
+            <p className="witness-detail-kicker mono">Witness</p>
+            <h1 className="witness-detail-quote">
+              &ldquo;{entry.quote}&rdquo;
+            </h1>
+            <div className="witness-detail-meta">
             <Badge>{entry.author}</Badge>
             <Badge>{entry.year}</Badge>
             <Badge>{entry.source}</Badge>
