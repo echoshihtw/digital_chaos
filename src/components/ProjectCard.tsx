@@ -27,6 +27,8 @@ export default function ProjectCard({ p }: { p: Law }) {
             <div className="project-card-face project-card-back">
               {p.cover && (
                 <Image
+                  width={900}
+                  height={600}
                   src={p.cover}
                   alt=""
                   className="project-card-back-image"

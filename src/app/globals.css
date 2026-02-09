@@ -183,10 +183,10 @@ html[data-theme="light"] .project-card-link .neon-border::after {
 }
 html[data-theme="light"] .project-card-link .neon-border > * { position: relative; z-index: 1; }
 html[data-theme="light"] .project-card-face {
-  background: transparent;
+  background:linear-gradient(140deg, color-mix(in hsl, var(--primary), var(--bg) 88%), color-mix(in hsl, var(--bg), transparent 20%));
   border-color: color-mix(in hsl, var(--border), transparent 35%);
 }
-html[data-theme="light"] .project-card-back { background: transparent; }
+html[data-theme="light"] .project-card-back { background: rgba(0, 0, 0, 0.9); }
 html[data-theme="light"] .project-card-back-image {
   opacity: 0.6;
   filter: brightness(1.05) saturate(1.1) contrast(1);
