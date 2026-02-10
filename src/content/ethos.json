@@ -2,21 +2,32 @@
   "meta": {
     "id": "ethos",
     "title": "On Method",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "status": "canonical",
-    "description": "Defines how truth is observed, evaluated, and preserved within this wiki.",
-    "lastUpdated": "2026-02-10"
+    "description": "Defines how truth is observed, evaluated, and preserved as systems, narratives, and power structures change.",
+    "lastUpdated": "2026-02-11"
   },
 
   "opening": {
     "lines": [
       "Truth is not declared here.",
       "It is observed, tested, and recorded.",
-      "This wiki exists to document patterns that survive contact with reality — across time, systems, and belief structures."
+      "This wiki exists to identify what stays true when everything else moves."
     ]
   },
 
   "sections": [
+    {
+      "id": "purpose",
+      "title": "Purpose",
+      "content": [
+        "This project exists to preserve patterns that outlast authority, belief, and identity.",
+        "It is not concerned with winning arguments, shaping ideology, or establishing consensus.",
+        "Its function is archival: to keep track of what continues to hold when explanations fail and systems are stressed.",
+        "It is designed to remain useful when context shifts."
+      ]
+    },
+
     {
       "id": "what_this_is",
       "title": "What This Is",
@@ -34,7 +45,7 @@
       "content": [
         "This is not a religion.",
         "This is not a manifesto.",
-        "This is not a personality.",
+        "This is not a community identity.",
         "This is not a moral authority.",
         "This is not a promise of certainty.",
         "Certainty is treated as a signal for re-examination."
@@ -46,10 +57,10 @@
       "title": "On Authority",
       "content": [
         "No voice is authoritative by default.",
-        "Names may appear.",
-        "Quotes may be preserved.",
+        "Names may appear for historical traceability.",
+        "Quotes may be preserved as artifacts, not endorsements.",
         "No individual is elevated above the patterns they observed.",
-        "This wiki values what was seen, what was tested, and what endured — not who said it."
+        "What matters is what endured, not who said it."
       ]
     },
 
@@ -59,9 +70,9 @@
       "content": [
         "Contradictions are not removed.",
         "They are documented.",
-        "When principles conflict, both are kept, context is expanded, and limits are exposed.",
+        "When principles conflict, both are retained and their limits made explicit.",
         "Reality is not required to be internally consistent.",
-        "Only honestly represented."
+        "Only accurately represented."
       ]
     },
 
@@ -69,7 +80,8 @@
       "id": "on_simplicity",
       "title": "On Simplicity",
       "content": [
-        "When two explanations exist, the simpler is preferred — until it fails.",
+        "When multiple explanations exist, the simplest is preferred — until it fails.",
+        "Simplicity is a starting point, not a guarantee.",
         "Complexity is not depth.",
         "Obscurity is not wisdom."
       ]
@@ -79,10 +91,10 @@
       "id": "on_time",
       "title": "On Time",
       "content": [
-        "Time is treated as a filter.",
+        "Time is treated as a filter, not a validator.",
         "Ideas that survive repetition, misuse, and reinterpretation gain weight.",
         "Ideas that require constant defense lose it.",
-        "Old laws are revisited.",
+        "Old laws are revisited regularly.",
         "New laws are introduced cautiously."
       ]
     },
@@ -93,7 +105,7 @@
       "content": [
         "Anyone may contribute.",
         "Contributions must clarify, not decorate.",
-        "Claims must be grounded in observation.",
+        "Claims must be grounded in observation or documented recurrence.",
         "Disagreement must be preserved when it exists.",
         "The structure of the system must be respected.",
         "This is a public record, not a personal canvas."

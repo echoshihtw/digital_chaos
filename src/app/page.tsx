@@ -17,19 +17,54 @@ export default function HomePage() {
         <div className="home-hero">
           <div className="home-hero-grid">
             <div className="home-hero-copy">
+              <p className="home-hero-kicker mono">{hero.tagline}</p>
               <h1 className="mono home-hero-title">{hero.headline}</h1>
-              <p className="home-hero-sub">{hero.subline}</p>
+              <p className="home-hero-highlight">{hero.highlight}</p>
+              <p className="home-hero-quip mono">
+                Protocol: laugh, then verify.
+              </p>
+              <div className="home-hero-manifest">
+                <div className="home-hero-manifest-group">
+                  <p className="home-hero-manifest-label mono">Stance</p>
+                  <ul className="home-hero-manifest-list">
+                    {hero.movement.stance.map((item) => (
+                      <li key={item} className="home-hero-manifest-item mono">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="home-hero-manifest-group">
+                  <p className="home-hero-manifest-label mono">Principles</p>
+                  <ul className="home-hero-manifest-list">
+                    {hero.movement.principles.map((item) => (
+                      <li key={item} className="home-hero-manifest-item mono">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <p className="home-hero-sub mono">{hero.subline}</p>
               <div className="home-hero-actions">
-                <Button as="a" href={hero.ctaPrimary.href}>
-                  {hero.ctaPrimary.label}
-                </Button>
-                <Button
-                  as="a"
+                <div className="home-hero-cta-row">
+                  <Button as="a" href={hero.ctaPrimary.href}>
+                    {hero.ctaPrimary.label}
+                  </Button>
+                  <Button
+                    as="a"
+                    href={hero.ctaWitness.href}
+                    variant="secondary"
+                  >
+                    {hero.ctaWitness.label}
+                  </Button>
+                </div>
+                <Link
+                  className="home-hero-secondary mono"
                   href={hero.ctaSecondary.href}
-                  variant="secondary"
                 >
                   {hero.ctaSecondary.label}
-                </Button>
+                </Link>
               </div>
             </div>
             <div className="home-hero-glyph">
@@ -39,7 +74,13 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title="Laws">
+      <Section id="laws" title="Laws">
+        <div className="home-law-header">
+          <p className="home-law-sub">Field notes catalogued as invariant patterns.</p>
+          <Link className="home-law-link mono" href="/laws">
+            View all laws →
+          </Link>
+        </div>
         <div className="home-law-grid">
           {laws.map((p) => (
             <ProjectCard key={p.id} p={p as Law} />
@@ -47,7 +88,7 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section title="Witnesses">
+      <Section id="witnesses" title="Witnesses">
         <div className="witness-home">
           <div className="witness-home-header">
             <p className="witness-home-sub">

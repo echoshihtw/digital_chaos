@@ -1,8 +1,10 @@
 {
   "headline": "> Truth survives by being shared, not held.",
+  "tagline": "What stays true when everything else moves.",
   "subline": "Occam · Murphy · Gödel · Entropy · Lindy · Systems · Invariants",
-  "ctaPrimary": { "label": "Enter the Laws", "href": "/laws" },
+  "ctaPrimary": { "label": "Enter the Laws", "href": "#laws" },
   "ctaSecondary": { "label": "On Method", "href": "/ethos" },
+  "ctaWitness": { "label": "Discover Witnesses", "href": "#witnesses" },
   "highlight": "This is a public record of patterns that persist when power shifts, systems fail, and narratives are rewritten.",
   "movement": {
     "stance": [

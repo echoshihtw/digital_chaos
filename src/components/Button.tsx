@@ -21,7 +21,7 @@ export default function Button({ children, onClick, as = 'button', href, variant
             'mono glitch',
             'neon-border',
             size === 'sm' ? 'px-3 py-1 text-sm' : 'px-4 py-2 text-base',
-            variant === 'primary' && 'bg-[color:var(--primary)] text-[color:var(--primary-contrast)]',
+            variant === 'primary' && 'bg-[color:var(--primary-button)] text-[color:var(--primary-contrast)]',
             variant === 'secondary' && 'bg-transparent text-[color:var(--text)]',
             variant === 'ghost' && 'bg-transparent opacity-80',
         ),

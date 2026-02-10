@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import BackgroundDimmer from "./BackgroundDimmer";
+import hero from "@/content/hero.json";
 
 export default function Header() {
   const headerRef = useRef<HTMLElement | null>(null);
@@ -36,9 +37,12 @@ export default function Header() {
         isHidden ? " is-hidden" : ""
       }`}
     >
-      <Link href="/" className="glitch" style={{ fontWeight: 700 }}>
-        digital_chaos.sh
-      </Link>
+      <div className="site-brand">
+        <Link href="/" className="glitch site-title">
+          digital_chaos.sh
+        </Link>
+        <span className="site-tagline">{hero.tagline}</span>
+      </div>
       <nav className="site-nav">
         <div className="flex gap-3">
           <Link href="/laws" className="glitch nav-link">
