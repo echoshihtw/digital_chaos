@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <Header />
+      {/*<Header />*/}
       <Section title="The Universal Laws">
         <ProjectFiltersGrid projects={sortedProjects as Law[]} />
       </Section>

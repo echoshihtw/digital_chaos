@@ -12,42 +12,35 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <>
-      <Header />
+      {/*<Header />*/}
       <Section>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1.5fr .8fr",
-            gap: 24,
-          }}
-        >
-          <div>
-            <h1 className="mono" style={{ fontSize: 36, margin: 0 }}>
-              {hero.headline}
-            </h1>
-            <p style={{ opacity: 0.9 }}>{hero.subline}</p>
-            <div style={{ display: "flex", gap: 12, marginTop: 12 }}>
-              <Button as="a" href={hero.ctaPrimary.href}>
-                {hero.ctaPrimary.label}
-              </Button>
-              <Button as="a" href={hero.ctaSecondary.href} variant="secondary">
-                {hero.ctaSecondary.label}
-              </Button>
+        <div className="home-hero">
+          <div className="home-hero-grid">
+            <div className="home-hero-copy">
+              <h1 className="mono home-hero-title">{hero.headline}</h1>
+              <p className="home-hero-sub">{hero.subline}</p>
+              <div className="home-hero-actions">
+                <Button as="a" href={hero.ctaPrimary.href}>
+                  {hero.ctaPrimary.label}
+                </Button>
+                <Button
+                  as="a"
+                  href={hero.ctaSecondary.href}
+                  variant="secondary"
+                >
+                  {hero.ctaSecondary.label}
+                </Button>
+              </div>
             </div>
-          </div>
-          <div className="center">
-            <Glyph />
+            <div className="home-hero-glyph">
+              <Glyph />
+            </div>
           </div>
         </div>
       </Section>
 
       <Section title="Laws">
-        <div
-          className="grid"
-          style={{
-            gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
-          }}
-        >
+        <div className="home-law-grid">
           {laws.map((p) => (
             <ProjectCard key={p.id} p={p as Law} />
           ))}

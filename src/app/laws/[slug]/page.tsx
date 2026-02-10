@@ -40,7 +40,7 @@ export default async function LawDetail({
 
   return (
     <>
-      <Header />
+      {/*<Header />*/}
       <Section>
         <div className="law-hero-grid">
           <div className="law-panel law-hero-content">
@@ -117,7 +117,10 @@ export default async function LawDetail({
                       return (
                         <li key={i}>
                           {hasTarget ? (
-                            <Link className="law-related-link" href={`/laws/${x}`}>
+                            <Link
+                              className="law-related-link"
+                              href={`/laws/${x}`}
+                            >
                               {label}
                             </Link>
                           ) : (
@@ -139,7 +142,10 @@ export default async function LawDetail({
                       return (
                         <li key={i}>
                           {hasTarget ? (
-                            <Link className="law-related-link" href={`/laws/${x}`}>
+                            <Link
+                              className="law-related-link"
+                              href={`/laws/${x}`}
+                            >
                               {label}
                             </Link>
                           ) : (
@@ -161,7 +167,10 @@ export default async function LawDetail({
                       return (
                         <li key={i}>
                           {hasTarget ? (
-                            <Link className="law-related-link" href={`/laws/${x}`}>
+                            <Link
+                              className="law-related-link"
+                              href={`/laws/${x}`}
+                            >
                               {label}
                             </Link>
                           ) : (

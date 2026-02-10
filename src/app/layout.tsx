@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "ChunYu.sh — The fun software engineer",
@@ -15,7 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <canvas id="bg-canvas" aria-hidden="true" />
+        <canvas id="bg-canvas" aria-hidden="true" suppressHydrationWarning />
+        <Header />
+
         <div className="container">{children}</div>
         {/* SSR-safe theme init */}
         <script src="/background.js" defer />

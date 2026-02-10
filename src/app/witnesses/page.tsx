@@ -5,12 +5,14 @@ import type { WitnessData } from "@/lib/types";
 import Link from "next/link";
 
 export default function WitnessesPage() {
-  const witnesses = (data as WitnessData).entries.filter((entry) => !entry.hidden);
+  const witnesses = (data as WitnessData).entries.filter(
+    (entry) => !entry.hidden,
+  );
   const meta = (data as WitnessData).meta;
 
   return (
     <>
-      <Header />
+      {/*<Header />*/}
       <Section title="Witnesses">
         <div className="witness-intro">
           <p className="witness-description">{meta.description}</p>

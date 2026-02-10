@@ -9,7 +9,7 @@ export default function EthosPage() {
 
   return (
     <>
-      <Header />
+      {/*<Header />*/}
       <Section>
         <div className="ethos-hero">
           <p className="ethos-kicker mono">Ethos</p>
