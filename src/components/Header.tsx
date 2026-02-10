@@ -6,18 +6,12 @@ import BackgroundDimmer from "./BackgroundDimmer";
 export default function Header() {
   return (
     <header
-      className="mono"
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        padding: "16px 0",
-      }}
+      className="mono site-header"
     >
       <Link href="/" className="glitch" style={{ fontWeight: 700 }}>
         digital_chaos.sh
       </Link>
-      <nav style={{ display: "flex", gap: 16, alignItems: "center" }}>
+      <nav className="site-nav">
         <Link href="/laws" className="glitch">
           {"// laws"}
         </Link>
